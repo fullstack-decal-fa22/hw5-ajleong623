@@ -2,14 +2,14 @@ import {useState} from "react";
 import axios from "axios";
 
 const Comments = ({ postId, comments: initialComments }) => {
-  const [_________, _________] = useState(initialComments);
+  const [id, setId] = useState(initialComments);
   const [newComment, setNewComment] = useState('');
 
   const handleSubmitComment = () => {
     console.log(newComment)
     // Un-comment the lines below to complete your solution
     // ====================
-    // axios.post(__________________, { newComment }).then((res) => {
+    axios.post(__________________, { newComment }).then((res) => {
     //   ________________;
     //   ________________
     // })

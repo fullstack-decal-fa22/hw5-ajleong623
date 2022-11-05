@@ -1,7 +1,7 @@
-import {_________} from "react";
+import {useState} from "react";
 import axios from "axios";
 
-const NewPost = ({ _________ }) => {
+const NewPost = ({ onSubmit }) => {
   const [id, setId] = useState();
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
@@ -13,7 +13,7 @@ const NewPost = ({ _________ }) => {
       body
     })
 
-    axios.post(_________, _________).then(_________);
+    axios.post(url, data).then((response) => console.log(response));
   }
 
   return <div>
