@@ -1,7 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 
-const NewPost = ({ onSubmit }) => {
+const NewPost = ({ myPost }) => {
   const [id, setId] = useState();
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
@@ -13,7 +13,7 @@ const NewPost = ({ onSubmit }) => {
       body
     })
 
-    axios.post(url, data).then((response) => console.log(response));
+    axios.post(`/post`, {id: NewPost.id, title: NewPost.title, body: NewPost.body }).then(myPost);
   }
 
   return <div>
